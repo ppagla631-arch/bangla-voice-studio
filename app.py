@@ -37,4 +37,7 @@ with gr.Blocks(title="Bangla Voice Studio") as demo:
     btn.click(generate, inputs=text, outputs=audio)
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 7860))
+    )
