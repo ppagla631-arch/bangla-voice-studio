@@ -5,7 +5,7 @@ import gradio as gr
 import tempfile
 import os
 
-# Voice options — আগের Pradeep কণ্ঠ রাখা হয়েছে
+# Voice options
 VOICES = {
     "🇧🇩 বাংলাদেশি পুরুষ — Pradeep": "bn-BD-PradeepNeural",
     "🇮🇳 ভারতীয় বাংলা পুরুষ — Bashkar": "bn-IN-BashkarNeural",
@@ -138,7 +138,6 @@ footer {
     display: none !important;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
     .gradio-container {
         width: 100% !important;
@@ -167,61 +166,18 @@ footer {
     }
 }
 """
-#hero h1 {
-    font-size: 42px;
-    margin: 5px;
-    color: white;
-}
 
-#hero h2 {
-    font-size: 25px;
-    color: #e5edff;
-    margin: 8px;
-}
 
-#hero p {
-    font-size: 19px;
-    color: #ffdf35;
-    font-weight: bold;
-}
+with gr.Blocks(
+    title="Bangla Voice Studio — Parves Islam",
+    theme=gr.themes.Soft(
+        primary_hue="blue",
+        secondary_hue="indigo"
+    ),
+    css=css
+) as demo:
 
-#main-panel {
-    background: white;
-    border: 1px solid #c5dcff;
-    border-radius: 22px;
-    padding: 18px;
-    box-shadow: 0 8px 25px #b7d2f5;
-}
-
-#generate-btn {
-    min-height: 62px;
-    border-radius: 16px;
-    font-size: 21px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #0875ed, #6415ef);
-    color: white;
-}
-
-#download-panel {
-    background: #e4f9eb;
-    border: 1px solid #91ddb0;
-    border-radius: 16px;
-    padding: 12px;
-}
-
-#features {
-    text-align: center;
-    color: #13295b;
-    font-weight: bold;
-    padding: 15px;
-}
-
-footer {
-    display: none !important;
-}
-"""
-
-with gr.Blocks    gr.HTML("""
+    gr.HTML("""
     <div id="hero">
         <div style="font-size:48px;">🎙️</div>
         <h1>বাংলা ভয়েস স্টুডিও</h1>
