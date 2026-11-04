@@ -165,6 +165,12 @@ footer {
         font-size: 18px;
     }
 }
+.gradio-container .wrap,
+.gradio-container .wrap *,
+.gradio-container [role="listbox"],
+.gradio-container [role="option"] {
+    cursor: pointer !important;
+}
 """
 
 
