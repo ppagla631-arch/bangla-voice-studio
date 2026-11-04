@@ -53,14 +53,22 @@ def count_text(text):
 
 
 css = """
-body {
+html, body {
+    width: 100% !important;
+    margin: 0 !important;
     background: #eef5ff !important;
 }
 
 .gradio-container {
-    max-width: 1250px !important;
+    width: 96% !important;
+    max-width: 1500px !important;
     margin: auto !important;
     background: #eef5ff !important;
+}
+
+main, .main {
+    width: 100% !important;
+    max-width: 1500px !important;
 }
 
 #hero {
@@ -69,10 +77,96 @@ body {
     border-radius: 20px;
     padding: 35px 20px;
     text-align: center;
-    margin-bottom: 18px;
+    margin: 15px auto 22px;
     border: 2px solid #1b74e8;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+#hero h1 {
+    font-size: 42px;
+    margin: 5px;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 25px;
+    color: #e5edff;
+    margin: 8px;
+}
+
+#hero p {
+    font-size: 19px;
+    color: #ffdf35;
+    font-weight: bold;
+}
+
+#main-panel {
+    background: white;
+    border: 1px solid #c5dcff;
+    border-radius: 22px;
+    padding: 22px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 25px #b7d2f5;
+}
+
+#generate-btn {
+    min-height: 62px;
+    border-radius: 16px;
+    font-size: 21px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0875ed, #6415ef);
+    color: white;
+}
+
+#download-panel {
+    background: #e4f9eb;
+    border: 1px solid #91ddb0;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+#features {
+    text-align: center;
+    color: #13295b;
+    font-weight: bold;
+    padding: 15px;
+}
+
+footer {
+    display: none !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .gradio-container {
+        width: 100% !important;
+        padding: 8px !important;
+        box-sizing: border-box;
+    }
+
+    #hero {
+        padding: 25px 10px;
+    }
+
+    #hero h1 {
+        font-size: 29px;
+    }
+
+    #hero h2 {
+        font-size: 20px;
+    }
+
+    #main-panel {
+        padding: 12px;
+    }
+
+    #generate-btn {
+        font-size: 18px;
+    }
+}
+"""
 #hero h1 {
     font-size: 42px;
     margin: 5px;
