@@ -172,10 +172,13 @@ footer {
     cursor: pointer !important;
 }
 """
-
+head = """
+<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />
+"""
 
 with gr.Blocks(
     title="Bangla Voice Studio — Parves Islam",
+head=head,
     theme=gr.themes.Soft(
         primary_hue="blue",
         secondary_hue="indigo"
