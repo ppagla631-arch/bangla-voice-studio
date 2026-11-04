@@ -221,16 +221,7 @@ footer {
 }
 """
 
-with gr.Blocks(
-    title="Bangla Voice Studio — Parves Islam",
-    theme=gr.themes.Soft(
-        primary_hue="blue",
-        secondary_hue="indigo"
-    ),
-    css=css
-) as demo:
-
-    gr.HTML("""
+with gr.Blocks    gr.HTML("""
     <div id="hero">
         <div style="font-size:48px;">🎙️</div>
         <h1>বাংলা ভয়েস স্টুডিও</h1>
