@@ -174,7 +174,6 @@ footer {
 """
 
 with gr.Blocks(
-    head='<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />',
     title="Bangla Voice Studio — Parves Islam",
     fill_width=True,
     theme=gr.themes.Soft(
@@ -279,7 +278,7 @@ with gr.Blocks(
 
 
 if __name__ == "__main__":
-    demo.queue().launch(
+    demo.queue().launchhead='<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />',
         server_name="0.0.0.0",
         server_port=int(os.environ.get("PORT", 7860))
     )
