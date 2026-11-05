@@ -4,7 +4,8 @@ import edge_tts
 import gradio as gr
 import tempfile
 import os
-
+from fastapi import FastAPI
+from fastapi.responses import PlainTextResponse
 # Voice options
 VOICES = {
     "🇧🇩 বাংলাদেশি পুরুষ — Pradeep": "bn-BD-PradeepNeural",
@@ -277,9 +278,18 @@ with gr.Blocks(
     """)
 
 
+app = FastAPI()
+
+@app.get("/google2a87644da4c7bbd4.html", response_class=PlainTextResponse)
+def google_verify():
+    return "google-site-verification: google2a87644da4c7bbd4.html"
+
+app = gr.mount_gradio_app(app, demo.queue(), path="/")
+
 if __name__ == "__main__":
-    demo.queue().launch(
-        head='<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />',
-        server_name="0.0.0.0",
-        server_port=int(os.environ.get("PORT", 7860))
+    import uvicorn
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 7860))
     )
