@@ -177,15 +177,14 @@ head = """
 """
 
 with gr.Blocks(
+    head='<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />',
     title="Bangla Voice Studio — Parves Islam",
-head=head,
+    fill_width=True,
     theme=gr.themes.Soft(
         primary_hue="blue",
         secondary_hue="indigo"
-    ),
-    css=css
+    )
 ) as demo:
-
     gr.HTML("""
     <div id="hero">
         <div style="font-size:48px;">🎙️</div>
