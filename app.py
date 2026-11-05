@@ -283,7 +283,14 @@ app = FastAPI()
 @app.get("/google2a87644da4c7bbd4.html", response_class=PlainTextResponse)
 def google_verify():
     return "google-site-verification: google2a87644da4c7bbd4.html"
-
+@app.get("/sitemap.xml", response_class=PlainTextResponse)
+def sitemap():
+    return """<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://bangla-voice-studio-s8gb.onrender.com/</loc>
+    </url>
+</urlset>"""
 app = gr.mount_gradio_app(app, demo.queue(), path="/")
 
 if __name__ == "__main__":
