@@ -172,9 +172,6 @@ footer {
     cursor: pointer !important;
 }
 """
-head = """
-<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />
-"""
 
 with gr.Blocks(
     head='<meta name="google-site-verification" content="vCL3YnylB6qzrYDKKTTILPP7a_0l7rUSyP-4QLPrVGs" />',
